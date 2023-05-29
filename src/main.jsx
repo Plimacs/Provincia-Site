@@ -13,7 +13,9 @@ import Regras from './paginas/Regras.jsx';
 import Duvidas from './paginas/Duvidas.jsx';
 import Suporte from './paginas/Suporte.jsx';
 import SuporteContatar from './paginas/SuporteContatar.jsx';
+import Login from './paginas/Login.jsx';
 import ErrorPage from './paginas/ErrorPage.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/suporte/:id",
         element: <SuporteContatar />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ]
   },
