@@ -14,6 +14,8 @@ import Duvidas from './paginas/Duvidas.jsx';
 import Suporte from './paginas/Suporte.jsx';
 import SuporteContatar from './paginas/SuporteContatar.jsx';
 import Login from './paginas/Login.jsx';
+import Registrar from './paginas/Registrar.jsx';
+import RecSenha from './paginas/RecSenha.jsx';
 import ErrorPage from './paginas/ErrorPage.jsx';
 
 
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "registrar",
+        element: <Registrar />,
+      },
+      {
+        path: "recsenha",
+        element: <RecSenha />,
       },
     ]
   },
