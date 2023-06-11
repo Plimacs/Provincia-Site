@@ -1,5 +1,6 @@
 import React from "react";3
 import { Link } from "react-router-dom";
+import './RecSenha.css';
 
 const RecSenha = () => {
     return(

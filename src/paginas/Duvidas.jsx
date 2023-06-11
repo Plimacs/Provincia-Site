@@ -1,4 +1,5 @@
 import React from "react";
+import './Duvidas.css';
 
 const Duvidas = () => {
     return(

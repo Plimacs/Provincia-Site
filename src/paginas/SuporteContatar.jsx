@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import './SuporteContatar.css';
 
 const SuporteContatar = () => {
     const { id } = useParams();
