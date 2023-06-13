@@ -13,9 +13,9 @@ const SuporteContatar = () => {
     };
 
     return (
-        <div>
-            <h1>{id}</h1>
-            <button onClick={handleSuporte}>Enviar Ticket</button>
+        <div className="support-contact-container">
+            <h1 className="support-contact-title">{id}</h1>
+            <button className="send-ticket-button" onClick={handleSuporte}>Enviar Ticket</button>
         </div>
     );
 };

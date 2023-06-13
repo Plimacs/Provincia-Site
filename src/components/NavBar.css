@@ -1,0 +1,22 @@
+nav {
+    background-color: #c7b6d0; /* Roxo escuro */
+    display:contents;
+    justify-content:center;
+    padding: 10px;
+  }
+  
+  
+  nav a {
+    color: #000000; /* Branco */
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #b38bde; /* Roxo claro */
+  }
+  

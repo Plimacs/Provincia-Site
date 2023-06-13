@@ -1,0 +1,91 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f3f3f300;
+  }
+  
+  .register-header {
+    margin-bottom: 40px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  .register-title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-link {
+    text-decoration: none;
+    color: #4caf50;
+  }
+  
+  .login-button {
+    padding: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-account-button {
+    padding: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-account-link {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2196f3;
+  }
+  
+  .login-button:hover,
+  .create-account-button:hover {
+    background-color: #45a049;
+  }
+  
+  .create-account-link:hover {
+    text-decoration: underline;
+  }
+  

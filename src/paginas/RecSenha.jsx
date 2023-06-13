@@ -4,23 +4,25 @@ import './RecSenha.css';
 
 const RecSenha = () => {
     return(
-        <div className="conteiner">
-            <header className="header">
-                <img src="" alt=""/>
-                <samp>Complete os campos a baixo, e verifique sua caixa de email. </samp>
+        <div className="password-recovery-container">
+            <header className="password-recovery-header">
+                <img src="logo.png" alt="Logo do Minecraft" className="logo" />
+                <h1 className="password-recovery-title">Recuperação de Senha</h1>
             </header>
 
-            <form>
-                <div className="imputContainer">
+            <form className="password-recovery-form">
+                <div className="input-container">
                     <label htmlFor="nick">Nome do Jogador:</label>
-                    <input type="text" name="nick" id="nick" placeholder="MatheuzimDoMine" />
+                    <input type="text" name="nick" id="nick" placeholder="MatheuzimDoMine,ErinDaPicareta" />
                 </div>
-                <div className="imputContainer">
+                <div className="input-container">
                     <label htmlFor="email">E-mail:</label>
                     <input type="text" name="email" id="email" placeholder="MeuEmail@Email.com" />
                 </div>
 
-                <Link to="/login"><button className="button">Enviar e voltar a tela de Login</button></Link>
+                <Link to="/login" className="login-link">
+                    <button className="send-button">Enviar e voltar à tela de Login</button>
+                </Link>
             </form>
         </div>
     );

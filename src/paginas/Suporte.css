@@ -1,0 +1,50 @@
+.suporte-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f3f3f300;
+  }
+  
+  .suporte-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .suporte-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .suporte-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .suporte-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .link-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .suporte-link:hover {
+    color: #4caf50;
+  }
+  
+  .suporte-link:hover .link-icon {
+    filter: invert(70%) sepia(90%) saturate(10000%) hue-rotate(90deg);
+  }
+  

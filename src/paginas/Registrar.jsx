@@ -4,34 +4,35 @@ import './Registrar.css';
 
 const Registrar = () => {
     return(
-        <div className="conteiner">
-            <header className="header">
-                <img src="" alt=""/>
-                <samp>Registre-se no nosso site, e de graça!</samp>
+        <div className="register-container">
+            <header className="register-header">
+                <img src="logo.png" alt="Logo do Minecraft" className="logo" />
+                <h1 className="register-title">Registre-se no nosso site, e de graça!</h1>
             </header>
 
-            <form>
-                <div className="imputContainer">
+            <form className="register-form">
+                <div className="input-container">
                     <label htmlFor="email">E-mail:</label>
                     <input type="text" name="email" id="email" placeholder="MeuEmail@Email.com" />
                 </div>
-                <div className="imputContainer">
+                <div className="input-container">
                     <label htmlFor="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" placeholder="****************" />
+                    <input type="password" name="senha" id="senha" placeholder="**************" />
                 </div>
-                <div className="imputContainer">
-                    <label htmlFor="senha">Repita sua senha:</label>
-                    <input type="password" name="senha2" id="senha2" placeholder="****************" />
+                <div className="input-container">
+                    <label htmlFor="senha2">Repita sua senha:</label>
+                    <input type="password" name="senha2" id="senha2" placeholder="**************" />
                 </div>
-                <div className="imputContainer">
+                <div className="input-container">
                     <label htmlFor="nick">Nome do Jogador:</label>
-                    <input type="text" name="nick" id="nick" placeholder="MatheuzimDoMine" />
+                    <input type="text" name="nick" id="nick" placeholder="MatheuzimDoMine,ErinDaPicareta" />
                 </div>
 
-                <Link to="/login"><button className="button">Logar</button></Link>
+                <Link to="/login" className="login-link">
+                    <button className="login-button">Logar</button>
+                </Link>
 
-                <button className="button">Criar Conta</button>
-
+                <button className="create-account-button">Criar Conta</button>
             </form>
         </div>
     );
