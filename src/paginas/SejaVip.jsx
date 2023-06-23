@@ -1,48 +1,105 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './SejaVip.css';
 
 const SejaVip = () => {
     return(
-        <div className="seja-vip-container">
-            <h1 className="seja-vip-title">Seja VIP no Minecraft!</h1>
-            <p className="seja-vip-description">Desfrute de vantagens exclusivas e torne-se um jogador VIP.</p>
+        <div className="loja-container">
+            <h1 className="loja-title">Apoie Província comprando produtos da nossa loja! </h1>
+            <p className="loja-description">Assim você ajuda a manter o servidor online.ヽ(✿ﾟ▽ﾟ)/</p>
             <img
-                className="seja-vip-image"
-                src="minecraft-vip.png"
-                alt="Seja VIP no Minecraft"
+                className="loja-image"
+                src="minecraft-store.png"
+                alt="Assinaturas e Vantagens Vips"
             />
-            <div className="seja-vip-perks">
-                <div className="perk">
+            <div className="loja-products">
+                <div className="product">
                     <img
-                        className="perk-icon"
-                        src="vip-access.png"
-                        alt="Acesso VIP"
+                        className="product-image"
+                        src="diamond-sword.png"
+                        alt="Vip Apoiador"
                     />
-                    <h2 className="perk-title">Acesso VIP</h2>
-                    <p className="perk-description">Explore áreas exclusivas e desbloqueie conteúdo especial.</p>
+                    <h1 className="product-title">Vip Apoiador</h1>
+                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <p className="product-description">- Tag exclusiva para apoiadores</p>
+                    <p className="product-description">- Loja vip</p>
+                    <p className="product-description">- Cosméticos vip</p>
+                    <p className="product-description">- Acesso rápido ao /warps</p>
+                    <p className="product-description">- Acesso livre ao servidor quando lotado</p>
+                    <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
+                    <p className="product-description">- Kit mensal para apoiadores</p>
+                    <p className="product-description">- Kit semanal para apoiadores</p>
+                    <h1 className="product-description">Brindes:</h1>
+                    <p className="product-description">- 1 asa exclusiva.</p>
+                    <p className="product-description">- 1 item épico do seu gosto.</p>
+                    <p className="product-description">- 2 cristais de retorno.</p>
+                    <p className="product-description">- 1 vasoura mágica com 10 vidas</p>
+                    <p className="product-price">R$19,99</p>
+                    <button className="product-button">Comprar</button>
                 </div>
-                <div className="perk">
+                <div className="product">
                     <img
-                        className="perk-icon"
-                        src="vip-shop.png"
-                        alt="Loja VIP"
+                        className="product-image"
+                        src="enchanted-armor.png"
+                        alt="Vip Padrinho"
                     />
-                    <h2 className="perk-title">Loja VIP</h2>
-                    <p className="perk-description">Aproveite descontos e ofertas exclusivas em nossa loja.</p>
+                    <h1 className="product-title">Vip Padrinho</h1>
+                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <p className="product-description">- Tag exclusiva para Padrinhos</p>
+                    <p className="product-description">- Loja vip</p>
+                    <p className="product-description">- Cosméticos vip</p>
+                    <p className="product-description">- Acesso rápido ao /warps</p>
+                    <p className="product-description">- Acesso ao comando /nick</p>
+                    <p className="product-description">- Acesso a cores ao enviar mensagens no chat</p>
+                    <p className="product-description">- Acesso livre ao servidor quando lotado</p>
+                    <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
+                    <p className="product-description">- Kit mensal para Padrinhos</p>
+                    <p className="product-description">- Kit semanal para Padrinhos</p>
+                    <h1 className="product-description">Brindes:</h1>
+                    <p className="product-description">- 1 asa exclusiva.</p>
+                    <p className="product-description">- 1 Ocarina exclusiva para vips.</p>
+                    <p className="product-description">- 1 item épico do seu gosto.</p>
+                    <p className="product-description">- 4 cristais de retorno.</p>
+                    <p className="product-description">- 1 vasoura mágica com 10 vidas</p>
+                    <p className="product-description">- Set completo de roupas RGB que mudam de cor</p>
+                    <p className="product-price">R$39,99</p>
+                    <button className="product-button">Comprar</button>
                 </div>
-                <div className="perk">
+                <div className="product">
                     <img
-                        className="perk-icon"
-                        src="vip-support.png"
-                        alt="Suporte VIP"
+                        className="product-image"
+                        src="potion.png"
+                        alt="Poção"
                     />
-                    <h2 className="perk-title">Suporte VIP</h2>
-                    <p className="perk-description">Tenha suporte prioritário e resolução rápida de problemas.</p>
+                    <h1 className="product-title">Vip Patrocinador</h1>
+                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <p className="product-description">- Tag RGB exclusiva para Patrocinadores</p>
+                    <p className="product-description">- Loja vip</p>
+                    <p className="product-description">- Cosméticos vip</p>
+                    <p className="product-description">- Acesso rápido ao /warps</p>
+                    <p className="product-description">- Acesso ao comando /nick</p>
+                    <p className="product-description">- Acesso a cores ao enviar mensagens no chat</p>
+                    <p className="product-description">- Acesso livre ao servidor quando lotado</p>
+                    <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
+                    <p className="product-description">- Kit mensal para Patrocinadores</p>
+                    <p className="product-description">- Kit semanal para Patrocinadores</p>
+                    <h1 className="product-description">Brindes:</h1>
+                    <p className="product-description">- 1 asa exclusiva.</p>
+                    <p className="product-description">- 2 Ocarina exclusiva para vips.</p>
+                    <p className="product-description">- 2 itens épicos do seu gosto.</p>
+                    <p className="product-description">- 5 cristais de retorno.</p>
+                    <p className="product-description">- 2 vasouras mágicas com 10 vidas</p>
+                    <p className="product-description">- 1 coroa exclusiva para patrocinadores</p>
+                    <p className="product-description">- Set completo de roupas RGB que mudam de cor</p>
+                    <p className="product-description">- 10 Xaropes RGB que te deixam brilhando em RGB por 25 minutos.</p>
+                    <p className="product-price">R$79,99</p>
+                    <button className="product-button">Comprar</button>
                 </div>
             </div>
-            <div className="seja-vip-footer">
-                <p className="footer-text">Eleve sua experiência de jogo e seja um jogador VIP!</p>
-                <button className="footer-button">Saiba mais</button>
+            <div className="loja-footer">
+                <p className="footer-text">Tá sem grana? Existem outras formas de obter vantagens ajudando o servidor!</p>
+                <p className="footer-text">Apenas votando no nosso servidor você pode ganhar prêmios! Você nos ajuda e nós te ajudamos.</p>
+                <Link to="/vote"><button className="footer-button">Ganhar Itens De Graça!</button></Link>
             </div>
         </div>
     );

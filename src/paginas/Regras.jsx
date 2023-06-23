@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Regras.css';
 
 const Regras = () => {
@@ -27,7 +28,7 @@ const Regras = () => {
             </div>
             <div className="regras-footer">
                 <p className="footer-text">Jogue de forma responsável e contribua para uma comunidade saudável.</p>
-                <button className="footer-button">Saiba mais</button>
+                <Link to="/suporte"><button className="footer-button">Sugerir regra</button></Link>
             </div>
         </div>
     );

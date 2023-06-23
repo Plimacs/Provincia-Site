@@ -13,7 +13,7 @@ const RecSenha = () => {
             <form className="password-recovery-form">
                 <div className="input-container">
                     <label htmlFor="nick">Nome do Jogador:</label>
-                    <input type="text" name="nick" id="nick" placeholder="MatheuzimDoMine,ErinDaPicareta" />
+                    <input type="text" name="nick" id="nick" placeholder="Usuário" />
                 </div>
                 <div className="input-container">
                     <label htmlFor="email">E-mail:</label>

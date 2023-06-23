@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Duvidas.css';
 
 const Duvidas = () => {
@@ -27,7 +28,7 @@ const Duvidas = () => {
             </div>
             <div className="duvidas-footer">
                 <p className="footer-text">Não encontrou a resposta para sua dúvida? Entre em contato conosco.</p>
-                <button className="footer-button">Contato</button>
+                <Link to="/suporte"><button className="footer-button">Contato</button></Link>
             </div>
         </div>
     );

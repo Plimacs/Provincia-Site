@@ -40,10 +40,6 @@ const Vote = () => {
                     <p className="option-description">Compartilhe suas ideias e sugestões para melhorar o Minecraft.</p>
                 </div>
             </div>
-            <div className="vote-footer">
-                <p className="footer-text">Sua voz é importante! Vote e faça a diferença no Minecraft.</p>
-                <button className="footer-button">Saiba mais</button>
-            </div>
         </div>
     );
 };

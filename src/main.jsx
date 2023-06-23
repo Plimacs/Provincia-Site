@@ -6,7 +6,6 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./paginas/Home.jsx";
-import Loja from "./paginas/Loja.jsx";
 import SejaVip from './paginas/SejaVip.jsx';
 import Vote from './paginas/Vote.jsx';
 import Regras from './paginas/Regras.jsx';
@@ -16,6 +15,7 @@ import SuporteContatar from './paginas/SuporteContatar.jsx';
 import Login from './paginas/Login.jsx';
 import Registrar from './paginas/Registrar.jsx';
 import RecSenha from './paginas/RecSenha.jsx';
+import Perfil from './paginas/Perfil.jsx';
 import ErrorPage from './paginas/ErrorPage.jsx';
 
 
@@ -28,10 +28,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "loja",
-        element: <Loja />,
       },
       {
         path: "sejavip",
@@ -68,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "recsenha",
         element: <RecSenha />,
+      },
+      {
+        path: "perfil",
+        element: <Perfil />,
       },
     ]
   },
