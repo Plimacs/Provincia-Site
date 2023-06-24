@@ -88,4 +88,11 @@
   .create-account-link:hover {
     text-decoration: underline;
   }
-  
+
+.error-message{
+  background-color: #a04545;
+}
+
+.sucess-message{
+  background-color: #00ca11;
+}

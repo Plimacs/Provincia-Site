@@ -3,18 +3,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 30px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-#header .logo {
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 2em;
-    text-decoration: none;
 }
 
 #header ul {
@@ -39,4 +32,14 @@
 #header ul li a.active {
     background: var(--primary);
     color: #ffffff;
+}
+
+.logo img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.usuario-logado {
+    max-width: 20px;
+    max-height: 20px;
 }

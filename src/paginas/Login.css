@@ -90,3 +90,6 @@ input {
 .create-account-link:hover {
   text-decoration: underline;
 }
+.error-message{
+  background-color: #a04545;
+}
