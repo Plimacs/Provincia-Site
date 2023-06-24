@@ -69,7 +69,7 @@ const SejaVip = () => {
                     <img
                         className="product-image"
                         src="potion.png"
-                        alt="Poção"
+                        alt="Vip Patricinador"
                     />
                     <h1 className="product-title">Vip Patrocinador</h1>
                     <h2 className="product-description">Vantagens do vip:</h2>

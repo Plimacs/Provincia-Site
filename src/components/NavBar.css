@@ -38,5 +38,5 @@
 #header ul li a:hover,
 #header ul li a.active {
     background: var(--primary);
-    color: #fff;
+    color: #ffffff;
 }

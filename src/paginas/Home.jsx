@@ -47,15 +47,34 @@ const Home = () => {
       </section>
 
       <div className="sec">
-      <div className="home-container">
-            <h1 className="home-title">Bem-vindo ao Mundo do Minecraft!</h1>
-            <p className="home-description">Explore, construa e divirta-se!</p>
+        <div className="home-container">
+            <h1 className="home-title">Bem-vindo a Província!</h1>
+            <p className="home-description">A melhor experiência RPG que você pode ter no minecraft!</p>
             <img
                 className="home-image"
                 src="minecraft-image.png"
                 alt="Minecraft"
             />
             <div className="home-features">
+                <div className="feature">
+                    <img
+                        className="feature-icon"
+                        src="adventure-icon.png"
+                        alt="Aventura"
+                    />
+                    <h2 className="feature-title">Totalmente sem mods!</h2>
+                    <p className="feature-description">Jogue uma aventura repleta de criatuas mágicas, chefões poderosos, histórias com finais alternativos, itens especiais com poderes únicos, pets e montarias super poderosas para te ajudar nas suas batalhas e você ainda pode acompanhar seu jogo de onde estiver!</p>
+                    <iframe src="http://ca-amd-b2.phosting.com.br:11066" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+                <div className="feature">
+                    <img
+                        className="feature-icon"
+                        src="adventure-icon.png"
+                        alt="Aventura"
+                    />
+                    <h2 className="feature-title">Conquistas e Guerras</h2>
+                    <p className="feature-description">Monte um time e domine Província batalhando nas guerras de clãs!</p>
+                </div>
                 <div className="feature">
                     <img
                         className="feature-icon"
@@ -71,31 +90,12 @@ const Home = () => {
                         src="building-icon.png"
                         alt="Construção"
                     />
-                    <h2 className="feature-title">Construção</h2>
-                    <p className="feature-description">Crie seu próprio mundo, construa casas, castelos, cidades e muito mais.</p>
-                </div>
-                <div className="feature">
-                    <img
-                        className="feature-icon"
-                        src="adventure-icon.png"
-                        alt="Aventura"
-                    />
                     <h2 className="feature-title">Aventura</h2>
                     <p className="feature-description">Enfrente criaturas perigosas, explore masmorras e enfrente chefes poderosos.</p>
                 </div>
             </div>
-            <div className="feature">
-                    <img
-                        className="feature-icon"
-                        src="adventure-icon.png"
-                        alt="Aventura"
-                    />
-                    <h2 className="feature-title">Tecnologia</h2>
-                    <p className="feature-description">Jogue sem mod, e acompanhe o jogo onde estiver! Usufrua da tecnologia Provinia!</p>
-                    <iframe src="http://ca-amd-b2.phosting.com.br:11066" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </div>
             <div className="home-footer">
-                <p className="footer-text">Junte-se a milhões de jogadores em uma experiência única!</p>
+                <p className="footer-text">Junte-se a vários jogadores em uma experiência única!</p>
                 <button className="footer-button">Comece a Jogar</button>
             </div>
         </div>
