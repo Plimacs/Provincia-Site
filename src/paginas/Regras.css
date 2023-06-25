@@ -33,7 +33,8 @@
   }
   
   .regra {
-    width: 300px;
+    max-width: 600;
+    min-width: 100;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #ffffff00;
