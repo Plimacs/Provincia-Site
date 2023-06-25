@@ -1,6 +1,7 @@
 import React from "react";3
 import { Link } from "react-router-dom";
 import './RecSenha.css';
+import CompRecSenha from "../components/CompRecSenha";
 
 const RecSenha = () => {
     return(
@@ -15,14 +16,9 @@ const RecSenha = () => {
                     <label htmlFor="nick">Nome do Jogador:</label>
                     <input type="text" name="nick" id="nick" placeholder="Usuário" />
                 </div>
-                <div className="input-container">
-                    <label htmlFor="email">E-mail:</label>
-                    <input type="text" name="email" id="email" placeholder="MeuEmail@Email.com" />
-                </div>
 
-                <Link to="/login" className="login-link">
-                    <button className="send-button">Enviar e voltar à tela de Login</button>
-                </Link>
+                <CompRecSenha />
+              
             </form>
         </div>
     );
