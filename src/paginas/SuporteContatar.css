@@ -16,14 +16,14 @@
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #4caf50;
-    color: white;
+    background-color:#80008000;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .send-ticket-button:hover {
-    background-color: #45a049;
+    background-color: #800080;
   }
   

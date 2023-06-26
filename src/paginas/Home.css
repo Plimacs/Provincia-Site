@@ -15,7 +15,7 @@
 
 body {
     overflow-x: hidden;
-    background: #cccccc;
+    background: #ffffff;
     min-height: 100vh;
 }
 
@@ -69,13 +69,13 @@ section #text span {
     text-decoration: none;
     display: inline-block;
     padding: 8px 30px;
-    background: #fff;
-    color: var(--primary);
+    background: #800080;
+    color: white;
     font-size: 1.2em;
     font-weight: 500;
     letter-spacing: 2px;
     border-radius: 40px;
-    transform: translatey(100px);
+    transform: translatey(-100px);
 }
 
 .sec {
@@ -86,7 +86,7 @@ section #text span {
 
 .sec h2 {
     font-size: 3.5em;
-    color: #fff;
+    
     margin-bottom: 10px;
 }
 

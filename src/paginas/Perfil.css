@@ -1,9 +1,9 @@
 .botao-logout {
-    background-color: #940000;
+    background-color: #800080;
     color: #dfdfdf;
 }
 
 .botao-logout:hover {
-    background: #ad0000;
+    background: #800080;
     color: #ffffff;
 }

@@ -6,21 +6,21 @@ const Home = () => {
     const handleScroll = () => {
       const value = window.scrollY;
       const text = document.getElementById('text');
-      const bird1 = document.getElementById('pass1');
-      const bird2 = document.getElementById('pass2');
+      const pass1 = document.getElementById('pass1');
+      const pass2 = document.getElementById('pass2');
       const btn = document.getElementById('btn');
-      const rocks = document.getElementById('pedras');
-      const forest = document.getElementById('florest');
+      const pedras = document.getElementById('pedras');
+      const florest = document.getElementById('florest');
       const header = document.getElementById('header');
 
       text.style.top = 50 + value * -0.1 + '%';
-      bird2.style.top = value * -1.5 + 'px';
-      bird2.style.left = value * 2 + 'px';
-      bird1.style.top = value * -1.5 + 'px';
-      bird1.style.left = value * -5 + 'px';
+      pass2.style.top = value * -1.5 + 'px';
+      pass2.style.left = value * 2 + 'px';
+      pass1.style.top = value * -1.5 + 'px';
+      pass1.style.left = value * -5 + 'px';
       btn.style.marginTop = value * 1.5 + 'px';
-      rocks.style.top = value * -0.12 + 'px';
-      forest.style.top = value * 0.25 + 'px';
+      pedras.style.top = value * -0.0 + 'px';
+      florest.style.top = value * 0.25 + 'px';
       header.style.top = value * 0.5 + 'px';
     };
 

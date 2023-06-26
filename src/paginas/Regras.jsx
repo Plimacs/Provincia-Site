@@ -12,8 +12,11 @@ const Regras = () => {
                 src="minecraft-regras.png"
                 alt="Regras do Minecraft"
             /> 
-            <h2>Pode ou não pode?  </h2> {/*colocar "_(._. )>" depois*/}
+            
+            <h2 className="regras-title">Pode ou não pode?<br /> _(._. )/</h2> {/*colocar "_(._. )>" depois*/}
+            
             <div className="regras-list">
+            
                 <div className="regra">
                     <h2 className="regra-title">Regra - 01</h2>
                     <p className="regra-description"> Proibido usar as regras de má fé ou para benefício próprio, sejá para prejudicar ou beneficiar um jogadores ou staff.</p>

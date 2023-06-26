@@ -19,8 +19,8 @@ const SejaVip = () => {
                         src="diamond-sword.png"
                         alt="Vip Apoiador"
                     />
-                    <h1 className="product-title">Vip Apoiador</h1>
-                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <h1 className="footer-text">Vip Apoiador</h1>
+                    <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag exclusiva para apoiadores</p>
                     <p className="product-description">- Loja vip</p>
                     <p className="product-description">- Cosméticos vip</p>
@@ -29,11 +29,32 @@ const SejaVip = () => {
                     <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
                     <p className="product-description">- Kit mensal para apoiadores</p>
                     <p className="product-description">- Kit semanal para apoiadores</p>
-                    <h1 className="product-description">Brindes:</h1>
+                    <h1 className="footer-text">Brindes:</h1>
                     <p className="product-description">- 1 asa exclusiva.</p>
                     <p className="product-description">- 1 item épico do seu gosto.</p>
                     <p className="product-description">- 2 cristais de retorno.</p>
                     <p className="product-description">- 1 vasoura mágica com 10 vidas</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
                     <p className="product-price">R$19,99</p>
                     <button className="product-button">Comprar</button>
                 </div>
@@ -43,8 +64,8 @@ const SejaVip = () => {
                         src="enchanted-armor.png"
                         alt="Vip Padrinho"
                     />
-                    <h1 className="product-title">Vip Padrinho</h1>
-                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <h1 className="footer-text">Vip Padrinho</h1>
+                    <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag exclusiva para Padrinhos</p>
                     <p className="product-description">- Loja vip</p>
                     <p className="product-description">- Cosméticos vip</p>
@@ -55,13 +76,25 @@ const SejaVip = () => {
                     <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
                     <p className="product-description">- Kit mensal para Padrinhos</p>
                     <p className="product-description">- Kit semanal para Padrinhos</p>
-                    <h1 className="product-description">Brindes:</h1>
+                    <h1 className="footer-text">Brindes:</h1>
                     <p className="product-description">- 1 asa exclusiva.</p>
                     <p className="product-description">- 1 Ocarina exclusiva para vips.</p>
                     <p className="product-description">- 1 item épico do seu gosto.</p>
                     <p className="product-description">- 4 cristais de retorno.</p>
                     <p className="product-description">- 1 vasoura mágica com 10 vidas</p>
                     <p className="product-description">- Set completo de roupas RGB que mudam de cor</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
                     <p className="product-price">R$39,99</p>
                     <button className="product-button">Comprar</button>
                 </div>
@@ -71,8 +104,8 @@ const SejaVip = () => {
                         src="potion.png"
                         alt="Vip Patricinador"
                     />
-                    <h1 className="product-title">Vip Patrocinador</h1>
-                    <h2 className="product-description">Vantagens do vip:</h2>
+                    <h1 className="footer-text">Vip Patrocinador</h1>
+                    <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag RGB exclusiva para Patrocinadores</p>
                     <p className="product-description">- Loja vip</p>
                     <p className="product-description">- Cosméticos vip</p>
@@ -83,7 +116,7 @@ const SejaVip = () => {
                     <p className="product-description">- Acesso ao canal privado do discord exclusivo para Vips</p>
                     <p className="product-description">- Kit mensal para Patrocinadores</p>
                     <p className="product-description">- Kit semanal para Patrocinadores</p>
-                    <h1 className="product-description">Brindes:</h1>
+                    <h1 className="footer-text">Brindes:</h1>
                     <p className="product-description">- 1 asa exclusiva.</p>
                     <p className="product-description">- 2 Ocarina exclusiva para vips.</p>
                     <p className="product-description">- 2 itens épicos do seu gosto.</p>
@@ -92,6 +125,8 @@ const SejaVip = () => {
                     <p className="product-description">- 1 coroa exclusiva para patrocinadores</p>
                     <p className="product-description">- Set completo de roupas RGB que mudam de cor</p>
                     <p className="product-description">- 10 Xaropes RGB que te deixam brilhando em RGB por 25 minutos.</p>
+                    <br/>
+                    <br/>
                     <p className="product-price">R$79,99</p>
                     <button className="product-button">Comprar</button>
                 </div>

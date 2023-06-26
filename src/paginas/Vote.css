@@ -12,11 +12,13 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #800080;
   }
   
   .vote-description {
     font-size: 18px;
     margin-bottom: 40px;
+    color: #800080;
   }
   
   .vote-image {
@@ -29,6 +31,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
+    color: #800080;
   }
   
   .option {

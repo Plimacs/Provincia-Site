@@ -11,9 +11,13 @@ const Duvidas = () => {
                 className="duvidas-image"
                 src="minecraft-duvidas.png"
                 alt="Dúvidas sobre o Minecraft"
+                
             />
-            <h2>Lista de dúvidas e respostas. _(´･ω･`)?</h2>
+            
+            <h2 className="duvidas-title">Lista de dúvidas e respostas. _(´･ω･`)?</h2>
+            
             <div className="duvidas-list">
+            
                 <div className="duvida">
                     <h2 className="duvida-title">Como jogar em Província?</h2>
                     <p className="duvida-description">É bem simples, basta ter o minecraft java, conexão com a internet e seguir este passo a passo:
@@ -25,7 +29,7 @@ const Duvidas = () => {
                 </div>
                 <div className="duvida">
                     <h2 className="duvida-title">Meu computador é fraco, consigo jogar?</h2>
-                    <p className="duvida-description">Por não usarmos mods, a maioria dos processoes são feitos pelo nosso servidor, até mesmo as animações das montarias, pets, criaturas e chefões são feitas pelo nosso servidor.
+                    <p className="duvida-description">Por não usarmos mods, a maioria dos processos são feitos pelo nosso servidor, até mesmo as animações das montarias, pets, criaturas e chefões são feitas pelo nosso servidor.
                     <br />Se seu computador rodar o mine 1.20, você vai conseguir jogar no nosso servidor.</p>
                 </div>
                 <div className="duvida">

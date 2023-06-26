@@ -1,3 +1,73 @@
+/* NavBar.css */
+
+#header {
+  background-color: rgba(128, 0, 128, 0);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--primary);
+  border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.logo img {
+  max-width: 90px;
+  max-height: 100px;
+}
+
+.usuario-logado {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 767px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  #header ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #header ul li a {
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Estilos para login */
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -19,6 +89,7 @@
 .login-title {
   font-size: 24px;
   margin-top: 20px;
+  color: #800080;
 }
 
 .login-form {
@@ -37,6 +108,7 @@
 label {
   font-size: 16px;
   margin-bottom: 5px;
+  color: #800080;
 }
 
 input {
@@ -51,15 +123,15 @@ input {
   font-size: 14px;
   margin-bottom: 20px;
   text-decoration: none;
-  color: #4caf50;
+  color: #800080;
 }
 
 .login-button {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #4caf50;
-  color: white;
+  background-color: #80008000;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -69,8 +141,8 @@ input {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #2196f3;
-  color: white;
+  background-color: #80008000;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -79,17 +151,11 @@ input {
 .create-account-link {
   margin-top: 20px;
   text-decoration: none;
-  color: #2196f3;
+  color: #800080;
 }
 
 .login-button:hover,
 .register-button:hover {
-  background-color: #45a049;
+  background-color: #800080;
 }
 
-.create-account-link:hover {
-  text-decoration: underline;
-}
-.error-message{
-  background-color: #a04545;
-}

@@ -12,11 +12,13 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #800080;
 }
 
 .loja-description {
   font-size: 18px;
   margin-bottom: 40px;
+  color: #000000;
 }
 
 .loja-image {
@@ -30,13 +32,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 40px;
+  color:#000000;
 }
 
 .product {
   width: 300px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #570096;
+  background-color: #ffffff00;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

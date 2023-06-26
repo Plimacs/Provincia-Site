@@ -1,45 +1,68 @@
-  #header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 50px;
+/* NavBar.css */
+
+#header {
+    background-color: rgba(128, 0, 128, 0);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-}
-
-#header ul {
+  }
+  
+  #header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#header ul li {
+  }
+  
+  #header ul li {
     list-style: none;
-    margin-left: 20px;
-}
-
-#header ul li a {
+    margin-left: 10px;
+  }
+  
+  #header ul li a {
     text-decoration: none;
     padding: 6px 15px;
     color: var(--primary);
     border-radius: 20px;
-}
-
-#header ul li a:hover,
-#header ul li a.active {
+  }
+  
+  #header ul li a:hover,
+  #header ul li a.active {
     background: var(--primary);
     color: #ffffff;
-}
-
-.logo img {
-    max-width: 100px;
+  }
+  
+  .logo img {
+    max-width: 90px;
     max-height: 100px;
-}
-
-.usuario-logado {
+  }
+  
+  .usuario-logado {
     max-width: 20px;
     max-height: 20px;
-}
+  }
+  
+  /* Estilos para telas pequenas */
+  @media screen and (max-width: 767px) {
+    #header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #header ul {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+  
+    #header ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    #header ul li a {
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+  }
+  
