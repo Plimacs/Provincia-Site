@@ -2,16 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./paginas/Home.jsx";
 import SejaVip from './paginas/SejaVip.jsx';
+import CompraFinalizada from './paginas/Comprafinalizada.jsx';
 import Vote from './paginas/Vote.jsx';
 import Regras from './paginas/Regras.jsx';
 import Duvidas from './paginas/Duvidas.jsx';
 import Suporte from './paginas/Suporte.jsx';
-import SuporteContatar from './paginas/SuporteContatar.jsx';
 import Login from './paginas/Login.jsx';
 import Registrar from './paginas/Registrar.jsx';
 import RecSenha from './paginas/RecSenha.jsx';
@@ -34,6 +33,10 @@ const router = createBrowserRouter([
         element: <SejaVip />,
       },
       {
+        path: "comprafinalizada/:randomKey",
+        element: <CompraFinalizada />,
+      },
+      {
         path: "vote",
         element: <Vote />,
       },
@@ -48,10 +51,6 @@ const router = createBrowserRouter([
       {
         path: "suporte",
         element: <Suporte />,
-      },
-      {
-        path: "/suporte/:id",
-        element: <SuporteContatar />,
       },
       {
         path: "login",

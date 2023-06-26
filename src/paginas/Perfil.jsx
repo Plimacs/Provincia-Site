@@ -7,6 +7,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import NomeUsuario from "../components/NomeUsuario";
 
+
 const Perfil = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
 
