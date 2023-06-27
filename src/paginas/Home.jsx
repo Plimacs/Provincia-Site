@@ -13,7 +13,7 @@ const Home = () => {
       const florest = document.getElementById('florest');
       const header = document.getElementById('header');
 
-      text.style.top = 50 + value * -0.1 + '%';
+      text.style.top = 20 + value * -0.1 + '%';
       pass2.style.top = value * -1.5 + 'px';
       pass2.style.left = value * 2 + 'px';
       pass1.style.top = value * -1.5 + 'px';

@@ -10,6 +10,7 @@ import NomeUsuario from "../components/NomeUsuario";
 
 const Perfil = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
+  const [compras, setCompras] = useState([]);
 
   useEffect(() => {
     const authListener = firebase.auth().onAuthStateChanged((user) => {
@@ -25,13 +26,22 @@ const Perfil = () => {
           .catch((error) => {
             console.error('Erro ao obter o nome do usuário:', error);
           });
+        firebase.database().ref('usuarios/' + userId + '/compras').on('value', (snapshot) => {
+          const comprasData = snapshot.val();
+          const comprasArray = comprasData ? Object.values(comprasData) : [];
+          setCompras(comprasArray);
+        });
       } else {
         setNomeUsuario('');
+        setCompras([]);
       }
     });
     return () => {
+      const authListener = firebase.auth().onAuthStateChanged((user) => {
+      const userId = user.uid;
       authListener();
-    };
+      firebase.database().ref('usuarios/' + userId + '/compras').off('value');
+    })};
   }, []);
 
   const handleLogout = async () => {
@@ -54,8 +64,16 @@ const Perfil = () => {
           </button>
         </Link>
       </div>
+      <br/>
+      <br/>
       <div>
-        <h2>Histórico de compras:</h2>
+        <h2>Suas Chaves:</h2>
+        <br/>
+        <ul>
+          {compras.map((compra, index) => (
+            <li key={index}>{compra}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

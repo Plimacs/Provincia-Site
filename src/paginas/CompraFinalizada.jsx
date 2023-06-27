@@ -16,7 +16,7 @@ const CompraFinalizada = () => {
             <p> Para usar é bem simples, basta digitar no chat do jogo "<spam className="ChaveComprada">/usarkey {randomKey}</spam>" e seu vip será ativado em questão de segundos, aproveite!</p>
             <br/>
             <br/>
-            <p> Ao sair desta página será possível ver suas chaves no Histórico de compras da área do usuário.</p>
+            <p> Ao sair desta página será possível ver suas chaves na área do usuário.</p>
         </div>
     );
 };
