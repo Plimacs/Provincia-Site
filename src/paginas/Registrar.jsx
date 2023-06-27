@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
+import firebase from '../services/firebaseConfig';
 import './Registrar.css';
 
 export const Registrar = () => {
+  const auth = firebase.auth;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
