@@ -6,7 +6,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import NomeUsuario from "../components/NomeUsuario";
-import UpImgPerfil from "../components/UpImgPerfil";
 
 const Perfil = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
@@ -46,7 +45,6 @@ const Perfil = () => {
   return (
     <div className="PerfilContainer">
       <div className="InfoDoUsuario">
-        <UpImgPerfil />
         <h1><NomeUsuario /></h1>
         {nomeUsuario ? '' : <SetNome />}
         <Link to="/login" className="create-account-link">
