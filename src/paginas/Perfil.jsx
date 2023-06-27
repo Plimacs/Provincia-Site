@@ -8,7 +8,6 @@ import 'firebase/compat/database';
 import NomeUsuario from "../components/NomeUsuario";
 import UpImgPerfil from "../components/UpImgPerfil";
 
-
 const Perfil = () => {
   const [nomeUsuario, setNomeUsuario] = useState('');
 

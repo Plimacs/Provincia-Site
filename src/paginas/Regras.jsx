@@ -5,7 +5,7 @@ import './Regras.css';
 const Regras = () => {
     return(
         <div className="regras-container">
-            <h1 className="regras-title">Regras<br/>(｡･_･)ﾉﾞ</h1>
+            <h1 className="regras-title">Regras<br />(｡･_･)ﾉﾞ</h1>
             <p className="regras-description">  Você não precisa gravar as regras do servidor, apenas tendo bom senso você segue as regras. </p>
             <img
                 className="regras-image"
@@ -13,7 +13,7 @@ const Regras = () => {
                 alt="Regras do Minecraft"
             /> 
             
-            <h2 className="regras-title">{"Pode ou não pode? _(._.)>"}</h2>
+            <h2 className="regras-title">Pode ou não pode?<br /> _(._. )/</h2> {/*colocar "_(._. )>" depois*/}
             
             <div className="regras-list">
             
