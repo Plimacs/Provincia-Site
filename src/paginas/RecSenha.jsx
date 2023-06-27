@@ -35,12 +35,13 @@ const RecSenha = () => {
     };
 
     return(
-<div className="password-recovery-container">
+  <div>
+    <div className="password-recovery-container">
        <header className="password-recovery-header">
-            <img src="logo.png" alt="Logo do Minecraft" className="logo" />
+       <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do provisoria" className="logo" />
             <h1 className="password-recovery-title">Recuperação de Senha</h1>
         </header>
-    <form className="email">
+       <form className="email">
         <div className="input-container">
           <label htmlFor="email">E-mail:</label>
           <input
@@ -52,10 +53,11 @@ const RecSenha = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        
-        <button type="button" onClick={recoverPassword}>Enviar e voltar à tela de Login</button>
+
+        <button className="EnviarEmail-button" type="button" onClick={recoverPassword}>Enviar e voltar à tela de Login</button>
 
        </form>
+  </div>
 </div>
     );
 };

@@ -11,7 +11,7 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #800080;
+    color: #3f006d;
   }
   
   .suporte-description {
@@ -43,7 +43,7 @@
   }
   
   .suporte-link:hover {
-    color: #800080;
+    color: #3f006d;
   }
   
   .suporte-link:hover .link-icon {

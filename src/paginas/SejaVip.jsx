@@ -118,11 +118,10 @@ const SejaVip = () => {
         <div className="loja-container">
             <h1 className="loja-title">Apoie Província comprando produtos da nossa loja! </h1>
             <p className="loja-description">Assim você ajuda a manter o servidor online.ヽ(✿ﾟ▽ﾟ)/</p>
-            <img
-                className="loja-image"
-                src="minecraft-store.png"
-                alt="Assinaturas e Vantagens Vips"
-            />
+            <br/>
+            <br/>
+            <br/>
+            <p>Assinaturas Mensais (o゜▽゜)o☆</p>
             <div className="loja-products">
                 <div className="product">
                     <img
@@ -131,6 +130,10 @@ const SejaVip = () => {
                         alt="Vip Apoiador"
                     />
                     <h1 className="footer-text">Vip Apoiador</h1>
+                    <p className="product-price">R$19,99</p>
+                    <button onClick={transferirChaveApoiador} className="product-button">Comprar</button>
+                    <br/>
+                    <br/>
                     <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag exclusiva para apoiadores</p>
                     <p className="product-description">- Loja vip</p>
@@ -176,6 +179,10 @@ const SejaVip = () => {
                         alt="Vip Padrinho"
                     />
                     <h1 className="footer-text">Vip Padrinho</h1>
+                    <p className="product-price">R$39,99</p>
+                    <button onClick={transferirChavePadrinho} className="product-button">Comprar</button>
+                    <br/>
+                    <br/>
                     <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag exclusiva para Padrinhos</p>
                     <p className="product-description">- Loja vip</p>
@@ -217,6 +224,10 @@ const SejaVip = () => {
                         alt="Vip Patricinador"
                     />
                     <h1 className="footer-text">Vip Patrocinador</h1>
+                    <p className="product-price">R$79,99</p>
+                    <button onClick={transferirChavePatrocinador} className="product-button">Comprar</button>
+                    <br/>
+                    <br/>
                     <h2 className="footer-text">Vantagens do vip:</h2>
                     <p className="product-description">- Tag RGB exclusiva para Patrocinadores</p>
                     <p className="product-description">- Loja vip</p>
@@ -246,7 +257,7 @@ const SejaVip = () => {
             <div className="loja-footer">
                 <p className="footer-text">Tá sem grana? Existem outras formas de obter vantagens ajudando o servidor!</p>
                 <p className="footer-text">Apenas votando no nosso servidor você pode ganhar prêmios! Você nos ajuda e nós te ajudamos.</p>
-                <Link to="/vote"><button className="footer-button">Ganhar Itens De Graça!</button></Link>
+                <Link to="/vote"><button className="VoteButton">Ganhar Itens De Graça!</button></Link>
             </div>
         </div>
     );

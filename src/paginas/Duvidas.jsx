@@ -7,13 +7,9 @@ const Duvidas = () => {
         <div className="duvidas-container">
             <h1 className="duvidas-title">Dúvidas frequentes <br /> щ(゜ロ゜щ)</h1>
             <p className="duvidas-description">Encontre respostas para as perguntas mais comuns dos jogadores.</p>
-            <img
-                className="duvidas-image"
-                src="minecraft-duvidas.png"
-                alt="Dúvidas sobre o Minecraft"
-                
-            />
-            
+            <br/>
+            <br/>
+            <br/>
             <h2 className="duvidas-title">Lista de dúvidas e respostas. _(´･ω･`)?</h2>
             
             <div className="duvidas-list">
@@ -39,7 +35,7 @@ const Duvidas = () => {
             </div>
             <div className="duvidas-footer">
                 <p className="footer-text">Não encontrou a resposta para sua dúvida? Entre em contato conosco.</p>
-                <Link to="/suporte"><button className="footer-button">Contato</button></Link>
+                <Link to="/suporte"><button className="SuporteButton">Contato</button></Link>
             </div>
         </div>
     );

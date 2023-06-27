@@ -75,6 +75,14 @@ const Perfil = () => {
           ))}
         </ul>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <p>Caso tenha algum problema com suas chaves ou seu perfil, entre em contato com nosso suporte.</p>
+      <div className="duvidas-footer">
+        <p className="footer-text">Estamos sempre dispostos a te ajudar!</p>
+        <Link to="/suporte"><button className="SuporteButton">Contato</button></Link>
+      </div>
     </div>
   );
 };

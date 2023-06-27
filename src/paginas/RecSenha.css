@@ -67,3 +67,12 @@
     background-color: #45a049;
   }
   
+  .EnviarEmail-button {
+    color: white;
+    background:#3f006d;
+  }
+    
+  .EnviarEmail-button:hover {
+    color: white;
+    background:#800080;
+  }

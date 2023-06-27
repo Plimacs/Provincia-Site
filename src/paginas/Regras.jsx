@@ -7,12 +7,9 @@ const Regras = () => {
         <div className="regras-container">
             <h1 className="regras-title">Regras<br/>(｡･_･)ﾉﾞ</h1>
             <p className="regras-description">  Você não precisa gravar as regras do servidor, apenas tendo bom senso você segue as regras. </p>
-            <img
-                className="regras-image"
-                src="minecraft-regras.png"
-                alt="Regras do Minecraft"
-            /> 
-            
+            <br/>
+            <br/>
+            <br/>
             <h2 className="regras-title">{"Pode ou não pode? _(._.)>"}</h2>
             
             <div className="regras-list">
@@ -56,7 +53,7 @@ const Regras = () => {
             </div>
             <div className="regras-footer">
                 <p className="footer-text">Jogue de forma responsável e contribua para uma comunidade saudável.</p>
-                <Link to="/suporte"><button className="footer-button">Sugerir regra</button></Link>
+                <Link to="/suporte"><button className="SuporteButton">Sugerir regra</button></Link>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
+import Logo from "../midia/imagens/Logo.png"
 import './Registrar.css';
 
 export const Registrar = () => {
@@ -41,7 +42,7 @@ export const Registrar = () => {
   return (
     <div className="register-container">
       <header className="register-header">
-        <img src="logo.png" alt="Logo do Minecraft" className="logo" />
+      <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do provisoria" className="logo" />
         <h1 className="register-title">Registre-se no nosso site, é de graça!</h1>
       </header>
 
@@ -77,7 +78,7 @@ export const Registrar = () => {
           />
         </div>
 
-        <button className="create-account-button" onClick={handleSignUp} disabled={loading}>
+        <button className="register-button" onClick={handleSignUp} disabled={loading}>
           {loading ? 'Salvando...' : 'Registrar'}
         </button>
 

@@ -96,3 +96,13 @@
 .sucess-message{
   background-color: #00ca11;
 }
+
+.register-button {
+  color: white;
+  background:#3f006d;
+}
+  
+.register-button:hover {
+  color: white;
+  background:#800080;
+}

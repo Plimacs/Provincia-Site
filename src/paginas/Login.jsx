@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import firebase from "firebase/compat/app";
+import Logo from "../midia/imagens/Logo.png"
 import "firebase/compat/auth";
 import './Login.css';
 
@@ -29,7 +30,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <header className="login-header">
-        <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do Minecraft" className="logo" />
+        <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do provisoria" className="logo" />
         <h1 className="login-title">Faça login na sua conta.</h1>
       </header>
       <form className="login-form">

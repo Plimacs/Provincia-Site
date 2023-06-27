@@ -84,4 +84,13 @@
   .footer-button:hover {
     background-color: #800080;
   }
+
+  .SuporteButton {
+    color: white;
+    background:#3f006d;
+  }
   
+  .SuporteButton:hover {
+    color: white;
+    background:#800080;
+  }
