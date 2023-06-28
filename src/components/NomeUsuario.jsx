@@ -30,7 +30,7 @@ const NomeUsuario = () => {
   }, []);
 
   return (
-        <p>{nomeUsuario ? nomeUsuario : ''}</p>
+    nomeUsuario ? nomeUsuario : ''
   );
 };
 

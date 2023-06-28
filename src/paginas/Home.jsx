@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import {Link} from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -53,7 +52,7 @@ const Home = () => {
                 <div className="feature">
                     <h2 className="feature-title">Totalmente sem mods!</h2>
                     <p className="feature-description">Jogue uma aventura repleta de criatuas mágicas, chefões poderosos, histórias com finais alternativos, itens especiais com poderes únicos, pets e montarias super poderosas para te ajudar nas suas batalhas e você ainda pode acompanhar seu jogo de onde estiver!</p>
-                    <iframe src="http://ca-amd-b2.phosting.com.br:11066" width="400" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    <iframe src="http://ca-amd-b2.phosting.com.br:11066" width="400" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </div>
                 <br/>
                 <div className="feature">
