@@ -4,6 +4,10 @@ import './SejaVip.css';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import { useNavigate } from 'react-router-dom';
+import ouro from '../midia/imagens/ouro.jpeg';
+import diamante from '../midia/imagens/diamante.png';
+import esmeralda from '../midia/imagens/esmeralda.jpg';
+
 
 
 const SejaVip = () => {
@@ -126,7 +130,7 @@ const SejaVip = () => {
                 <div className="product">
                     <img
                         className="product-image"
-                        src="diamond-sword.png"
+                        src={ouro}
                         alt="Vip Apoiador"
                     />
                     <h1 className="footer-text">Vip Apoiador</h1>
@@ -175,7 +179,7 @@ const SejaVip = () => {
                 <div className="product">
                     <img
                         className="product-image"
-                        src="enchanted-armor.png"
+                        src={diamante}
                         alt="Vip Padrinho"
                     />
                     <h1 className="footer-text">Vip Padrinho</h1>
@@ -220,7 +224,7 @@ const SejaVip = () => {
                 <div className="product">
                     <img
                         className="product-image"
-                        src="potion.png"
+                        src={esmeralda}
                         alt="Vip Patricinador"
                     />
                     <h1 className="footer-text">Vip Patrocinador</h1>
