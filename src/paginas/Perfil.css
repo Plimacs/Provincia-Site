@@ -7,3 +7,33 @@
     background: #800080;
     color: #ffffff;
 }
+
+.SuporteButton {
+    color: white;
+    background:#3f006d;
+}
+
+.Button {
+    color: white;
+    background:#3f006d;
+}
+
+.PerfilContainer {
+    max-width: 600;
+    min-width: 100;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff00;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.vips-list {
+    max-width: 600;
+    min-width: 100;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff00;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
