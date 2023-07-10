@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebaseConfig';
-import { useNavigate } from 'react-router-dom';
-import Logo from "../midia/imagens/Logo.png"
 import './Registrar.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 export const Registrar = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [SenhaDiferente, setSenhaDiferente] = useState('');
-  const navigate = useNavigate();
 
   const [
     createUserWithEmailAndPassword,
@@ -23,24 +22,23 @@ export const Registrar = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setSenhaDiferente('As senhas não coincidem');
+      toast.error('As senhas não coincidem');
       return;
     }
 
     try {
       const createdUser = await createUserWithEmailAndPassword(email, password);
       if (createdUser) {
-        navigate('/login');
-        alert('Conta criada com sucesso!')
+        toast.success('Conta criada com sucesso!');
       }
     } catch (error) {
       console.log('Erro ao criar usuário:', error);
-      setError(error.message);
     }
   }
 
   return (
     <div className="register-container">
+      <ToastContainer />
       <header className="register-header">
       <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do provisoria" className="logo" />
         <h1 className="register-title">Registre-se no nosso site, é de graça!</h1>
@@ -77,15 +75,19 @@ export const Registrar = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
+        <p>Obs: Sua senha deve ter mais de 6 digitos</p>
+        {error && <p className="erroMensagens"><br/>Você inseriu informações inválidas ou esta conta já existe!</p>}
+       <br/>
 
         <button className="register-button" onClick={handleSignUp} disabled={loading}>
           {loading ? 'Salvando...' : 'Registrar'}
         </button>
 
-        <br />
-        {error && <p className="error-message">Você inseriu informações inválidas ou esta conta já existe!<br /></p>}
-        {SenhaDiferente && <p className="error-message">{SenhaDiferente}</p>}
       </form>
+      
+      <Link to="/login" className="create-account-link">
+          <button className="button">Voltar a tela de login</button>
+        </Link>
     </div>
   );
 };
