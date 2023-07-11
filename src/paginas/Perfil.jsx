@@ -233,7 +233,7 @@ const Perfil = () => {
           <h3>Vip Patrocinador:</h3>
           <br/>
           {patrocinador.map((patrocinadorkey, indexPatrocinador) => (
-          <div>
+          <div key={indexPatrocinador}>
             <h4 key={indexPatrocinador}>Sua chave: {patrocinadorkey}</h4>
             <p>Para ativar seu vip basta abrir o chat do jogo e digitar "/usarkey {patrocinadorkey}".</p>
             <h4>Copiar comando: <CopyButton text={`/usarkey ${patrocinadorkey}`}/></h4>
@@ -260,7 +260,7 @@ const Perfil = () => {
           <h3>Vip Padrinho:</h3>
           <br/>
           {padrinho.map((padrinhokey, indexPadrinho) => (
-          <div>
+          <div key={indexPadrinho}>
             <h4 key={indexPadrinho}>Sua chave: {padrinhokey}</h4>
             <p>Para ativar seu vip basta abrir o chat do jogo e digitar "/usarkey {padrinhokey}".</p>
             <h4>Copiar comando: <CopyButton text={`/usarkey ${padrinhokey}`}/></h4>
@@ -288,7 +288,7 @@ const Perfil = () => {
           <h3>Vip Apoiador:</h3>
           <br/>
           {apoiador.map((apoiadorkey, indexApoiador) => (
-          <div>
+          <div key={indexApoiador}>
             <h4 key={indexApoiador}>Sua chave: {apoiadorkey}</h4>
             <p>Para ativar seu vip basta abrir o chat do jogo e digitar "/usarkey {apoiadorkey}".</p>
             <h4>Copiar comando: <CopyButton text={`/usarkey ${apoiadorkey}`}/></h4>

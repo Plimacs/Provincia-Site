@@ -7,26 +7,6 @@ import 'firebase/compat/database';
 const CompraFinalizada = () => {
   const { randomKey } = useParams();
 
-  useEffect(() => {
-    const authListener = firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        const userId = user.uid;
-        firebase.database().ref('usuarios/' + userId + '/contador').once('value')
-          .then((snapshot) => {
-            const contadorValue = snapshot.val();
-            console.log('Contador:', contadorValue);
-          })
-          .catch((error) => {
-            console.error('Erro ao obter o contador:', error);
-          });
-      }
-    });
-
-    return () => {
-      authListener();
-    };
-  }, []);
-
   return (
     <div className="CompraFinalizada">
       <h2>Compra concluída com sucesso!</h2>

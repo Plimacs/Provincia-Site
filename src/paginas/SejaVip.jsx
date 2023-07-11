@@ -42,14 +42,20 @@ const SejaVip = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
       const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
-
+  
       userRef.once('value')
         .then((snapshot) => {
           const ativoData = snapshot.val();
           if (ativoData) {
-            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+            exibirMensagemPopUp(
+              'Você já tem um plano VIP!'
+            );
           } else {
-            realizarCompra('apoiador', userId);
+            exibirMensagemPopUp(
+              'Deseja comprar o VIP Apoiador?',
+              'apoiador',
+              true
+            );
           }
         })
         .catch((error) => {
@@ -59,19 +65,25 @@ const SejaVip = () => {
       navigate('/login');
     }
   };
-
+  
   const transferirChavePadrinho = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
       const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
-
+  
       userRef.once('value')
         .then((snapshot) => {
           const ativoData = snapshot.val();
           if (ativoData) {
-            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+            exibirMensagemPopUp(
+              'Você já tem um plano VIP!'
+            );
           } else {
-            realizarCompra('padrinho', userId);
+            exibirMensagemPopUp(
+              'Deseja comprar o VIP Padrinho?',
+              'padrinho',
+              true
+            );
           }
         })
         .catch((error) => {
@@ -81,19 +93,25 @@ const SejaVip = () => {
       navigate('/login');
     }
   };
-
+  
   const transferirChavePatrocinador = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
       const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
-
+  
       userRef.once('value')
         .then((snapshot) => {
           const ativoData = snapshot.val();
           if (ativoData) {
-            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+            exibirMensagemPopUp(
+              'Você já tem um plano VIP!'
+            );
           } else {
-            realizarCompra('patrocinador', userId);
+            exibirMensagemPopUp(
+              'Deseja comprar o VIP Patrocinador?',
+              'patrocinador',
+              true
+            );
           }
         })
         .catch((error) => {
@@ -103,10 +121,10 @@ const SejaVip = () => {
       navigate('/login');
     }
   };
-
+  
   const realizarCompra = (tipoVip, userId) => {
     const vipsRef = firebase.database().ref('vips/' + tipoVip);
-
+  
     vipsRef.once('value')
       .then((snapshot) => {
         const vipsData = snapshot.val();
@@ -115,7 +133,7 @@ const SejaVip = () => {
         const randomKey = vipKeys[randomIndex];
         const randomValue = vipsData[randomKey];
         const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/' + tipoVip);
-
+  
         userRef.update({ [randomKey]: randomValue })
           .then(() => {
             vipsRef.child(randomKey).remove();
@@ -130,15 +148,26 @@ const SejaVip = () => {
         console.error('Erro ao obter os dados do nó "vips/' + tipoVip + '":', error);
       });
   };
+  
 
-  const exibirMensagemPopUp = (mensagem) => {
+  const exibirMensagemPopUp = (mensagem, tipoVip, exibirBotaoComprar) => {
+    const titulo = exibirBotaoComprar ? mensagem : 'Você já tem um plano VIP!';
+    const descricao = exibirBotaoComprar
+      ? 'Ao comprar este produto você está comprando uma chave de ativação, que ao ser utilizada dentro do jogo, inicia uma contagem regressiva de 30 dias para o término do seu VIP.'
+      : 'Para consultar ou trocar seu plano VIP, utilize a Área do cliente.';
+    const showCancelButton = exibirBotaoComprar;
+  
     Swal.fire({
-      text: mensagem,
-      showCancelButton: false,
+      title: titulo,
+      text: descricao,
+      showCancelButton: showCancelButton,
+      cancelButtonText: 'Cancelar',
       confirmButtonColor: '#800080',
-      confirmButtonText: 'Área do cliente',
+      confirmButtonText: exibirBotaoComprar ? 'Comprar' : 'Área do cliente',
     }).then((result) => {
-      if (result.isConfirmed) {
+      if (result.isConfirmed && exibirBotaoComprar) {
+        realizarCompra(tipoVip, isUserLoggedIn.uid);
+      } else if (result.isConfirmed) {
         navigate('/perfil');
       }
     });
