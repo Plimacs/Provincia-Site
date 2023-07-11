@@ -11,6 +11,7 @@ import esmeralda from '../midia/imagens/esmeralda.jpg';
 const SejaVip = () => {
   const navigate = useNavigate();
   const [nomeUsuario, setNomeUsuario] = useState('');
+  const isUserLoggedIn = firebase.auth().currentUser;
 
   useEffect(() => {
     const authListener = firebase.auth().onAuthStateChanged((user) => {
@@ -37,88 +38,101 @@ const SejaVip = () => {
   }, []);
 
   const transferirChaveApoiador = () => {
-    const userId = firebase.auth().currentUser.uid;
-    const vipsRef = firebase.database().ref('vips/apoiador');
+    if (isUserLoggedIn) {
+      const userId = isUserLoggedIn.uid;
+      const vipsRef = firebase.database().ref('vips/apoiador');
 
-    vipsRef.once('value')
-      .then((snapshot) => {
-        const vipsData = snapshot.val();
-        const vipKeys = Object.keys(vipsData);
-        const randomIndex = Math.floor(Math.random() * vipKeys.length);
-        const randomKey = vipKeys[randomIndex];
-        const randomValue = vipsData[randomKey];
-        const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/apoiador');
+      vipsRef.once('value')
+        .then((snapshot) => {
+          const vipsData = snapshot.val();
+          const vipKeys = Object.keys(vipsData);
+          const randomIndex = Math.floor(Math.random() * vipKeys.length);
+          const randomKey = vipKeys[randomIndex];
+          const randomValue = vipsData[randomKey];
+          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/apoiador');
 
-        userRef.update({ [randomKey]: randomValue })
-          .then(() => {
-            vipsRef.child(randomKey).remove();
-            console.log('compra efetuada com sucesso');
-            navigate(`/Comprafinalizada/${randomKey}`);
-          })
-          .catch((error) => {
-            console.error('Erro ao transferir a chave:', error);
-          });
-      })
-      .catch((error) => {
-        console.error('Erro ao obter os dados do nó "vips/apoiador":', error);
-      });
+          userRef.update({ [randomKey]: randomValue })
+            .then(() => {
+              vipsRef.child(randomKey).remove();
+              console.log('compra efetuada com sucesso');
+              navigate(`/Comprafinalizada/${randomKey}`);
+            })
+            .catch((error) => {
+              console.error('Erro ao transferir a chave:', error);
+            });
+        })
+        .catch((error) => {
+          console.error('Erro ao obter os dados do nó "vips/apoiador":', error);
+        });
+    } else {
+      navigate('/login');
+    }
   };
 
   const transferirChavePadrinho = () => {
-    const userId = firebase.auth().currentUser.uid;
-    const vipsRef = firebase.database().ref('vips/padrinho');
+    if (isUserLoggedIn) {
+      const userId = isUserLoggedIn.uid;
+      const vipsRef = firebase.database().ref('vips/padrinho');
 
-    vipsRef.once('value')
-      .then((snapshot) => {
-        const vipsData = snapshot.val();
-        const vipKeys = Object.keys(vipsData);
-        const randomIndex = Math.floor(Math.random() * vipKeys.length);
-        const randomKey = vipKeys[randomIndex];
-        const randomValue = vipsData[randomKey];
-        const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/padrinho');
+      vipsRef.once('value')
+        .then((snapshot) => {
+          const vipsData = snapshot.val();
+          const vipKeys = Object.keys(vipsData);
+          const randomIndex = Math.floor(Math.random() * vipKeys.length);
+          const randomKey = vipKeys[randomIndex];
+          const randomValue = vipsData[randomKey];
+          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/padrinho');
 
-        userRef.update({ [randomKey]: randomValue })
-          .then(() => {
-            vipsRef.child(randomKey).remove();
-            console.log('compra efetuada com sucesso');
-            navigate(`/Comprafinalizada/${randomKey}`);
-          })
-          .catch((error) => {
-            console.error('Erro ao transferir a chave:', error);
-          });
-      })
-      .catch((error) => {
-        console.error('Erro ao obter os dados do nó "vips/padrinho":', error);
-      });
+          userRef.update({ [randomKey]: randomValue })
+            .then(() => {
+              vipsRef.child(randomKey).remove();
+              console.log('compra efetuada com sucesso');
+              navigate(`/Comprafinalizada/${randomKey}`);
+            })
+            .catch((error) => {
+              console.error('Erro ao transferir a chave:', error);
+            });
+        })
+        .catch((error) => {
+          console.error('Erro ao obter os dados do nó "vips/padrinho":', error);
+        });
+    } else {
+      navigate('/login');
+    }
   };
 
   const transferirChavePatrocinador = () => {
-    const userId = firebase.auth().currentUser.uid;
-    const vipsRef = firebase.database().ref('vips/patrocinador');
+    if (isUserLoggedIn) {
+      const userId = isUserLoggedIn.uid;
+      const vipsRef = firebase.database().ref('vips/patrocinador');
 
-    vipsRef.once('value')
-      .then((snapshot) => {
-        const vipsData = snapshot.val();
-        const vipKeys = Object.keys(vipsData);
-        const randomIndex = Math.floor(Math.random() * vipKeys.length);
-        const randomKey = vipKeys[randomIndex];
-        const randomValue = vipsData[randomKey];
-        const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/patrocinador');
+      vipsRef.once('value')
+        .then((snapshot) => {
+          const vipsData = snapshot.val();
+          const vipKeys = Object.keys(vipsData);
+          const randomIndex = Math.floor(Math.random() * vipKeys.length);
+          const randomKey = vipKeys[randomIndex];
+          const randomValue = vipsData[randomKey];
+          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/patrocinador');
 
-        userRef.update({ [randomKey]: randomValue })
-          .then(() => {
-            vipsRef.child(randomKey).remove();
-            console.log('compra efetuada com sucesso');
-            navigate(`/Comprafinalizada/${randomKey}`);
-          })
-          .catch((error) => {
-            console.error('Erro ao transferir a chave:', error);
-          });
-      })
-      .catch((error) => {
-        console.error('Erro ao obter os dados do nó "vips/patrocinador":', error);
-      });
+          userRef.update({ [randomKey]: randomValue })
+            .then(() => {
+              vipsRef.child(randomKey).remove();
+              console.log('compra efetuada com sucesso');
+              navigate(`/Comprafinalizada/${randomKey}`);
+            })
+            .catch((error) => {
+              console.error('Erro ao transferir a chave:', error);
+            });
+        })
+        .catch((error) => {
+          console.error('Erro ao obter os dados do nó "vips/patrocinador":', error);
+        });
+    } else {
+      navigate('/login');
+    }
   };
+
     return(
         <div className="loja-container">
             <h1 className="loja-title">Apoie Província comprando produtos da nossa loja! </h1>
