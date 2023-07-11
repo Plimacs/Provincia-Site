@@ -49,7 +49,7 @@ const CompraFinalizada = () => {
       </p>
       <br/>
       <br/>
-      <p>Ao sair desta página, será possível ver suas chaves na área do usuário.</p>
+      <p>Ao sair desta página, será possível ver suas chaves na área do cliente.</p>
     </div>
   );
 };

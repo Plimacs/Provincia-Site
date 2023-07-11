@@ -7,6 +7,7 @@ import 'firebase/compat/database';
 import ouro from '../midia/imagens/ouro.jpeg';
 import diamante from '../midia/imagens/diamante.png';
 import esmeralda from '../midia/imagens/esmeralda.jpg';
+import Swal from 'sweetalert2';
 
 const SejaVip = () => {
   const navigate = useNavigate();
@@ -40,29 +41,19 @@ const SejaVip = () => {
   const transferirChaveApoiador = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
-      const vipsRef = firebase.database().ref('vips/apoiador');
+      const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
 
-      vipsRef.once('value')
+      userRef.once('value')
         .then((snapshot) => {
-          const vipsData = snapshot.val();
-          const vipKeys = Object.keys(vipsData);
-          const randomIndex = Math.floor(Math.random() * vipKeys.length);
-          const randomKey = vipKeys[randomIndex];
-          const randomValue = vipsData[randomKey];
-          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/apoiador');
-
-          userRef.update({ [randomKey]: randomValue })
-            .then(() => {
-              vipsRef.child(randomKey).remove();
-              console.log('compra efetuada com sucesso');
-              navigate(`/Comprafinalizada/${randomKey}`);
-            })
-            .catch((error) => {
-              console.error('Erro ao transferir a chave:', error);
-            });
+          const ativoData = snapshot.val();
+          if (ativoData) {
+            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+          } else {
+            realizarCompra('apoiador', userId);
+          }
         })
         .catch((error) => {
-          console.error('Erro ao obter os dados do nó "vips/apoiador":', error);
+          console.error('Erro ao verificar o plano VIP ativo:', error);
         });
     } else {
       navigate('/login');
@@ -72,29 +63,19 @@ const SejaVip = () => {
   const transferirChavePadrinho = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
-      const vipsRef = firebase.database().ref('vips/padrinho');
+      const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
 
-      vipsRef.once('value')
+      userRef.once('value')
         .then((snapshot) => {
-          const vipsData = snapshot.val();
-          const vipKeys = Object.keys(vipsData);
-          const randomIndex = Math.floor(Math.random() * vipKeys.length);
-          const randomKey = vipKeys[randomIndex];
-          const randomValue = vipsData[randomKey];
-          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/padrinho');
-
-          userRef.update({ [randomKey]: randomValue })
-            .then(() => {
-              vipsRef.child(randomKey).remove();
-              console.log('compra efetuada com sucesso');
-              navigate(`/Comprafinalizada/${randomKey}`);
-            })
-            .catch((error) => {
-              console.error('Erro ao transferir a chave:', error);
-            });
+          const ativoData = snapshot.val();
+          if (ativoData) {
+            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+          } else {
+            realizarCompra('padrinho', userId);
+          }
         })
         .catch((error) => {
-          console.error('Erro ao obter os dados do nó "vips/padrinho":', error);
+          console.error('Erro ao verificar o plano VIP ativo:', error);
         });
     } else {
       navigate('/login');
@@ -104,33 +85,63 @@ const SejaVip = () => {
   const transferirChavePatrocinador = () => {
     if (isUserLoggedIn) {
       const userId = isUserLoggedIn.uid;
-      const vipsRef = firebase.database().ref('vips/patrocinador');
+      const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo');
 
-      vipsRef.once('value')
+      userRef.once('value')
         .then((snapshot) => {
-          const vipsData = snapshot.val();
-          const vipKeys = Object.keys(vipsData);
-          const randomIndex = Math.floor(Math.random() * vipKeys.length);
-          const randomKey = vipKeys[randomIndex];
-          const randomValue = vipsData[randomKey];
-          const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/patrocinador');
-
-          userRef.update({ [randomKey]: randomValue })
-            .then(() => {
-              vipsRef.child(randomKey).remove();
-              console.log('compra efetuada com sucesso');
-              navigate(`/Comprafinalizada/${randomKey}`);
-            })
-            .catch((error) => {
-              console.error('Erro ao transferir a chave:', error);
-            });
+          const ativoData = snapshot.val();
+          if (ativoData) {
+            exibirMensagemPopUp('Você já tem um plano VIP! para consultar ou trocar seu plano VIP, utilize a Área do cliente.');
+          } else {
+            realizarCompra('patrocinador', userId);
+          }
         })
         .catch((error) => {
-          console.error('Erro ao obter os dados do nó "vips/patrocinador":', error);
+          console.error('Erro ao verificar o plano VIP ativo:', error);
         });
     } else {
       navigate('/login');
     }
+  };
+
+  const realizarCompra = (tipoVip, userId) => {
+    const vipsRef = firebase.database().ref('vips/' + tipoVip);
+
+    vipsRef.once('value')
+      .then((snapshot) => {
+        const vipsData = snapshot.val();
+        const vipKeys = Object.keys(vipsData);
+        const randomIndex = Math.floor(Math.random() * vipKeys.length);
+        const randomKey = vipKeys[randomIndex];
+        const randomValue = vipsData[randomKey];
+        const userRef = firebase.database().ref('usuarios/' + userId + '/Ativo/' + tipoVip);
+
+        userRef.update({ [randomKey]: randomValue })
+          .then(() => {
+            vipsRef.child(randomKey).remove();
+            console.log('compra efetuada com sucesso');
+            navigate(`/Comprafinalizada/${randomKey}`);
+          })
+          .catch((error) => {
+            console.error('Erro ao transferir a chave:', error);
+          });
+      })
+      .catch((error) => {
+        console.error('Erro ao obter os dados do nó "vips/' + tipoVip + '":', error);
+      });
+  };
+
+  const exibirMensagemPopUp = (mensagem) => {
+    Swal.fire({
+      text: mensagem,
+      showCancelButton: false,
+      confirmButtonColor: '#800080',
+      confirmButtonText: 'Área do cliente',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/perfil');
+      }
+    });
   };
 
     return(
