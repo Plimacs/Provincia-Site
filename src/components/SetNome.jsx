@@ -52,7 +52,7 @@ const SetNome = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="nomeimput">Nome do usuário:</label>
+        <label htmlFor="nomeimput" >Nome do usuário:</label>
         <input
           type="text" id="nomeInput" value={nome} onChange={handleNomeChange} required maxLength={10} placeholder="ex: STEVE"
         />

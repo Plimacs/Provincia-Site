@@ -31,14 +31,14 @@ const NavBar = () => {
 
   return (
     <header id="NavBarMaior">
+      <div className="logo">
+        <img src={Logo} width="70" height="70" align="left" alt="Província"/>
+      </div>
       <ul  className={`RotasMaior ${isActive ? 'active' : ''}`}>
         <div className={`NavBarMenor ${isActive ? 'active' : ''}`} onClick={handleClick}>
          <p className="RotasMenor"></p>
          <p className="RotasMenor"></p>
          <p className="RotasMenor"></p>
-        </div>
-        <div className="logo">
-        <img src={Logo} width="70" height="70" align="left" alt="Província"/>
         </div>
         <li className="Rotas"><Link to="/">Home</Link></li>
         <li className="Rotas"><Link to="/sejavip">Seja Vip</Link></li>

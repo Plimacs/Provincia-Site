@@ -35,7 +35,7 @@ const RecSenha = () => {
     <div className="password-recovery-container">
     <ToastContainer />
        <header className="password-recovery-header">
-       <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" alt="Logo do provisoria" className="logo" />
+       <img src="https://w7.pngwing.com/pngs/345/622/png-transparent-buff-knight-idle-rpg-runner-gabriel-knight-sins-of-the-fathers-wonder-knights-retro-shooter-rpg-gurk-ii-the-8-bit-rpg-rpg-tears-revolude-android-purple-game-android-thumbnail.png" width="70" height="70" alt="Logo do provisoria" className="logo" />
             <h1 className="password-recovery-title">Recuperação de Senha</h1>
         </header>
        <form className="email">
